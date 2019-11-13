@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body onload="updateColours()">
+        <div class="cubeSide">
+        <div class="row">
+        <div class="square" id="b1"></div>
+        <div class="square" id="b2"></div>
+        <div class="square" id="b3"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="b4"></div>
+        <div class="square" id="b5"></div>
+        <div class="square" id="b6"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="b7"></div>
+        <div class="square" id="b8"></div>
+        <div class="square" id="b9"></div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="square" id="o1"></div>
+        <div class="square" id="o2"></div>
+        <div class="square end" id="o3"></div>
+        <div class="square" id="w1"></div>
+        <div class="square" id="w2"></div>
+        <div class="square end" id="w3"></div>
+        <div class="square" id="r1"></div>
+        <div class="square" id="r2"></div>
+        <div class="square" id="r3"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="o4"></div>
+        <div class="square" id="o5"></div>
+        <div class="square end" id="o6"></div>
+        <div class="square" id="w4"></div>
+        <div class="square" id="w5"></div>
+        <div class="square end" id="w6"></div>
+        <div class="square" id="r4"></div>
+        <div class="square" id="r5"></div>
+        <div class="square" id="r6"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="o7"></div>
+        <div class="square" id="o8"></div>
+        <div class="square end" id="o9"></div>
+        <div class="square" id="w7"></div>
+        <div class="square" id="w8"></div>
+        <div class="square end" id="w9"></div>
+        <div class="square" id="r7"></div>
+        <div class="square" id="r8"></div>
+        <div class="square" id="r9"></div>
+        </div>
+        <div class="cubeSide">
+        <div class="row">
+        <div class="square" id="g1"></div>
+        <div class="square" id="g2"></div>
+        <div class="square" id="g3"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="g4"></div>
+        <div class="square" id="g5"></div>
+        <div class="square" id="g6"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="g7"></div>
+        <div class="square" id="g8"></div>
+        <div class="square" id="g9"></div>
+        </div>
+        </div>
+        <div class="cubeSide">
+        <div class="row">
+        <div class="square" id="y1"></div>
+        <div class="square" id="y2"></div>
+        <div class="square" id="y3"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="y4"></div>
+        <div class="square" id="y5"></div>
+        <div class="square" id="y6"></div>
+        </div>
+        <div class="row">
+        <div class="square" id="y7"></div>
+        <div class="square" id="y8"></div>
+        <div class="square" id="y9"></div>
+        </div>
+        </div>
+
+        <div class="buttonBoard">
+        <!-- <button onclick="R()">R</button>
+        <button onclick="Rx()">R'</button>
+        <button onclick="R2()">R2</button>
+        <button onclick="L()">L</button>
+        <button onclick="Lx()">L'</button>
+        <button onclick="L2()">L2</button>
+        <button onclick="U()">U</button>
+        <button onclick="Ux()">U'</button>
+        <button onclick="U2()">U2</button>
+        <button onclick="D()">D</button>
+        <button onclick="Dx()">D'</button>
+        <button onclick="D2()">D2</button>
+        <button onclick="F()">F</button>
+        <button onclick="Fx()">F'</button>
+        <button onclick="F2()">F2</button>
+        <button onclick="B()">B</button>
+        <button onclick="Bx()">B'</button>
+        <button onclick="B2()">B2</button> -->
+        <button onclick="scramble()">Scramble</button>
+        <!-- <button onclick="reset()">Reset</button> -->
+        <!-- <button onclick="solveYellowAndRed()">Solve yellow and red</button>
+        <button onclick="solveYellowAndGreen()">Solve yellow and green</button>
+        <button onclick="solveYellowAndOrange()">Solve yellow and orange</button>
+        <button onclick="solveYellowAndBlue()">Solve yellow and blue</button> -->
+        <button onclick="solveCrossForReal()">Solve cross</button>
+        <!-- <button onclick="solveRedAndGreenPair()">Solve red and green pair</button>
+        <button onclick="solveGreenAndOrangePair()">Solve green and orange pair</button>
+        <button onclick="solveOrangeAndBluePair()">Solve orange and blue pair</button>
+        <button onclick="solveBlueAndRedPair()">Solve blue and red pair</button> -->
+        <button onclick="solveF2L()">Solve F2L</button>
+        <button onclick="solveOLL()">Solve OLL</button>
+        <button onclick="solvePLL()">Solve PLL</button>
+        <button onclick="solve()">Solve</button>
+        <!-- <button onclick="TPerm()">T Perm</button>
+        <button onclick="GaPerm()">Ga Perm</button>
+        <button onclick="GbPerm()">Gb Perm</button>
+        <button onclick="GcPerm()">Gc Perm</button>
+        <button onclick="GdPerm()">Gd Perm</button> -->
+        </div>
+        <h1>Scramble: </h1>
+        <h2 id="scramble"></h2>
+        <h1>Solution: </h1>
+        <h2 id="solution"></h2>
+
+</body>
+</html>
