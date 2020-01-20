@@ -28,6 +28,33 @@ button{
     margin: 10px;
 }
 
+#camera{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    height: 240px;
+    border: 1px solid black;
+}
+
+#results{
+  position: fixed;
+  top: 280px;
+  right: 20px;
+}
+
+#snapButton{
+  position: fixed;
+  top: 20px;
+  right: 360px;
+}
+
+#canvas{
+  position: fixed;
+  top: 280px;
+  right: 20px;
+}
+
 @media only screen and (max-width: 600px){
     .square{
         height: 20px;

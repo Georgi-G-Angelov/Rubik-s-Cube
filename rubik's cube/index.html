@@ -7,8 +7,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script src="solver.js"></script>
+    <script type="text/javascript" src="webcamjs/webcam.min.js"></script>
+    <script src="webcamHandler.js" charset="utf-8"></script>
+    <script src="cubeSideHandler.js" charset="utf-8"></script>
 </head>
 <body onload="updateColours()">
+  <div id="camera"></div>
+  <input id="snapButton" type=button value="Take Snapshot" onClick="take_snapshot()">
+  <input id="sideButton" type=button value="Take Snapshot" onClick="setSide('g')">
+
+  <script type="text/javascript">
+      Webcam.attach( '#camera' );
+  </script>
+
+  <div id="results" ></div>
+  <!--
+  <canvas id="canvas" width="320" height="240"></canvas>
+  -->
+
         <div class="cubeSide">
         <div class="row">
         <div class="square" id="b1"></div>
